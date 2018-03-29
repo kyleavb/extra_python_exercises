@@ -8,3 +8,17 @@
 
 
 # *** your code here ***
+def singleOut(data):
+    single = []
+    i = len(data)
+    while 0 < len(data):
+        if(data[i] == data[i - 1]):
+            data.pop(data[i])
+            data.pop(data[i-1])
+        else:
+            single.append(data[i])
+            i += 1
+    return single
+
+test = singleOut([1,1,2,2,3,3,4,5,5,6,6,7,7])
+print(test)

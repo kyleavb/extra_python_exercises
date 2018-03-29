@@ -36,3 +36,23 @@
 
 
 # *** your code here ***
+from random import *
+
+def guessGame():
+    answered = False
+    attemps = 0
+    goal = randint(1, 100)
+    print('dev Test: ' + str(goal))
+    print('guess a number between 1 and 100')
+    while(answered == False):
+        guess = input('Your Guess:')
+        if(guess == goal):
+            answered = True
+            print('Correct! You got it in: ' + str(attemps) + ' attempts!')
+        elif(guess < goal):
+            attemps += 1
+            print('Not it, the number is higher')
+        elif(guess > goal):
+            attemps += 1
+            print('Not it, the number is lower')
+guessGame()

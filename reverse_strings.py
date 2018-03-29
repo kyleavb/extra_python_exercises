@@ -9,3 +9,9 @@
 
 
 # *** your code here ***
+def string_reverse(string):
+    return_str = string[::-1]
+    return return_str
+print('test string:  kyle cool')
+print('expect: looc elyk')
+print(string_reverse('kyle cool'))
